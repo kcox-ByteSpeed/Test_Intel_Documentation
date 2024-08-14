@@ -1,0 +1,68 @@
+# Intel® Server Board S2600WF Family BIOS and Firmware Update via Intel® One Boot Flash Update (Intel® OFU) Utility
+
+***
+
+## Prerequisites
+Before proceeding with the update, ensure the following prerequisites are met:
+
+1. Firmware Requirements:
+    - System BIOS: R02010016 or later
+    - ME Firmware: 04.01.04.804 or later
+    - BMC Firmware: 2.88.71773d70 or later
+    - FRUSDR: 2.04 or later
+    - PMEM: 01.02.00.5446 or later
+
+
+2. Intel® One Boot Flash Update (Intel® OFU) Utility Version: V14.1 Build 31 or later.
+
+3. Supported Operating Systems:
+    - Windows* 
+    - Linux*
+
+4. Important Notes:
+    - The OFU utility with the flashupdt tool does not support PMEM firmware updates. Please refer to the "PMEM_Update_Instructions.txt" in the package for specific instructions.
+    - Ensure that no BIOS admin passwords are set, or prepare to include password parameters during the update process.
+
+***
+
+## Update Instructions
+1. Preparation:
+    - Download and extract the update package to a directory on your system.
+    - Review the included ReleaseNotes.txt for specific details on updates, bug fixes, and known issues.
+
+2. Update Process:
+    - Windows:
+        - Open a command prompt or PowerShell in the directory where the package is extracted.
+        - Execute the startup.bat script to begin the update process. The OFU utility will handle the sequence: ME, BIOS, FD, FRUSDR, BMC, and PMEM (if applicable).
+        - The system will automatically reset after the updates are applied.
+
+    - Linux:
+        - Open a terminal in the directory where the package is extracted.
+        - Execute the startup.sh script using the command sh startup.sh. The OFU utility will uninstall any existing OFU versions, install the latest one, and proceed with the update sequence: - ME, BIOS, FD, FRUSDR, BMC, and PMEM (if applicable).
+        - The system will automatically reset after the updates are applied.
+
+3. Post-Update:
+    - Verify the firmware versions post-update to ensure that all components have been successfully updated to the required versions.
+    - If issues are encountered, refer to the troubleshooting section in the ReleaseNotes.txt.
+
+***
+
+## Remarks
+- File Case Sensitivity: The Intel® OFU utility is case-sensitive. If transferring the update package between different environments, ensure files are properly extracted or mounted to avoid case conversion issues.
+- Security Considerations: Starting from BMC version 2.88, SSL certificates must be 2048-bit or longer, and BMC credential access is required for files in internal virtual media.
+- Firmware Downgrade Limitations: Some firmware components, such as BMC and FRUSDR, cannot be downgraded to previous versions.
+
+***
+
+This guide should provide engineers with the necessary steps to update the BIOS and firmware on the Intel® Server Board S2600WF Family using the Intel® OFU Utility. Always ensure that the system meets all prerequisites before initiating the update to avoid any complications.
+
+# Sources of Information
+
+- [Intel® Server BIOS Support Central](https://www.intel.com/content/www/us/en/support/articles/000088822/server-products.html)
+- [Intel® Server Board S2600WF Family BIOS and Firmware Update for Intel® One Boot Flash Update (Intel® OFU) Utility](https://www.intel.com/content/www/us/en/download/19078/intel-server-board-s2600wf-family-bios-and-firmware-update-for-intel-one-boot-flash-update-intel-ofu-utility.html)
+- [Release Notes and Update Instructions](https://downloadmirror.intel.com/812651/Release%20Notes%20and%20Update%20Instructions.txt)
+
+## Revision History
+| Revision | Date       | Comments                                                                 | Author     |
+|----------|------------|--------------------------------------------------------------------------|------------|
+| 1.0      | 08/13/2024 | Initial release of BIOS and Firmware Update Tutorial for Intel® Server Board S2600WF Family via OFU. | Keegan Cox |
