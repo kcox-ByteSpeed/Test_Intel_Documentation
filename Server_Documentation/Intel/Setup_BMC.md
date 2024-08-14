@@ -10,6 +10,14 @@
 
 ***
 
+## Prerequisites
+> Before you begin, ensure you have the following:
+
+- **Physical Access to the Server:** You will need to connect peripherals (mouse, keyboard, monitor) to the server and access the physical ports.
+- **Network Information:** Have the **IP address**, **subnet mask**, and **gateway** information ready if you plan to use static IP configuration.
+- **Admin Privileges:** You should have administrative privileges to make changes to the server’s UEFI settings.
+- **Ethernet Cable:** Ensure you have an Ethernet cable to connect the server to your network via the management port.
+- **Web Browser:** Access to a web browser on a device connected to the **same network as the server** for final BMC access.
 
 ## 1. Initial Setup
 1. Connect Hardware:
@@ -33,7 +41,11 @@
         - Set a static or dynamic IPv4 address (Static is recommended for most applications)
         - Enter the subnet mask
         - Enter the gateway
+        > Record network information for later use
     - Plug an Ethernet cable into the management port of the server
+        - There is a mgmt label next to the port
+
+![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/BMC_Management_Port.png)
 
 2. (Optional) Baseboard LAN Configuration:
     - If desired, navigate to Baseboard LAN Configuration to set up another network address
@@ -41,12 +53,13 @@
 
 
 ## 4. User Configuration
-1. At the top of the page, navigate to `User Configuration` and press <KBD>Enter</KBD>:
+1. At the top of the page, navigate to User Configuration and press <KBD>Enter</KBD>:
 
 2. Set Privileges for User2:
-    - Under User2, set the privilege to the desired level (`User`, `Operator`, `Administrator`, `No Access`)
+    - Under User2, set the privilege to the desired level (`User`, `Operator`, `Administrator`, `No Access`).
     - Change the user status to `Enabled`
-    - Set a `username` and a secure `password`
+    - Set a username and a secure password
+    > **Note:** You can `enable` complex passwords under `User Configuration > Enable Complex Password`. Once enabled, the password complexity criteria will be displayed on the right-hand side of the screen.
 
 3. (Optional) Set Up Additional Users:
     - If needed, set up additional users with desired privileges
@@ -54,9 +67,10 @@
 
 ## 5. Finalizing and Accessing BMC
 1. Save and Exit:
-    - Press <KBD>F10</KBD> to save changes and exit the setup.
+    - Press <KBD>F10</KBD> to save changes and exit the setup
 
 2. Access the BMC:
-    - Ensure the management port is connected to your network via Ethernet.
-    - Open a web browser and navigate to the IP address you set during configuration.
-    - Enter the username and password you created to access the BMC and manage your system remotely.
+    - Ensure the management port is connected to your network via Ethernet
+    - Open a web browser from a machine connected to the same network as the `Dedicated Management LAN Configuration IP` address you set in step [3.1](#3-configuring-bmc-network-settings)
+    - Navigate to the IP address you set during configuration  (Eg. `https://192.168.15.5` )
+    - Enter the username and password you created to access the BMC and manage your system remotely
