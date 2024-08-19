@@ -56,13 +56,22 @@ Before proceeding with the update, ensure the following prerequisites are met:
 
 This guide should provide engineers with the necessary steps to update the BIOS and firmware on the Intel® Server Board S2600WF Family using the Intel® OFU Utility. Always ensure that the system meets all prerequisites before initiating the update to avoid any complications.
 
-# Sources of Information
+# Sources
 
 - [Intel® Server BIOS Support Central](https://www.intel.com/content/www/us/en/support/articles/000088822/server-products.html)
 - [Intel® Server Board S2600WF Family BIOS and Firmware Update for Intel® One Boot Flash Update (Intel® OFU) Utility](https://www.intel.com/content/www/us/en/download/19078/intel-server-board-s2600wf-family-bios-and-firmware-update-for-intel-one-boot-flash-update-intel-ofu-utility.html)
 - [Release Notes and Update Instructions](https://downloadmirror.intel.com/812651/Release%20Notes%20and%20Update%20Instructions.txt)
 
+## Sources
+- [Intel® Server BIOS Support Central][Intel® Server BIOS Support Central]
+- [Intel® Server Board S2600WF Intel® OFU Download][Intel® Server Board S2600WF Intel® OFU Download]
+- [Release Notes and Update Instructions][Release Notes and Update Instructions]
+
+[Intel® Server BIOS Support Central]: https://www.intel.com/content/www/us/en/support/articles/000088822/server-products.html
+[Intel® Server Board S2600WF Intel® OFU Download]: https://www.intel.com/content/www/us/en/download/19078/intel-server-board-s2600wf-family-bios-and-firmware-update-for-intel-one-boot-flash-update-intel-ofu-utility.html
+[Release Notes and Update Instructions]: https://downloadmirror.intel.com/812651/Release%20Notes%20and%20Update%20Instructions.txt
+
 ## Revision History
 | Revision | Date       | Comments                                                                 | Author     |
 |----------|------------|--------------------------------------------------------------------------|------------|
-| 1.0      | 08/13/2024 | Initial release of BIOS and Firmware Update Tutorial for Intel® Server Board S2600WF Family via OFU. | Keegan Cox |
+| 1.0      | 08/13/2024 | Initial release | Keegan Cox |

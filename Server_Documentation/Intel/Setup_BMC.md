@@ -1,7 +1,7 @@
 # Setting Up the BMC
 > This guide will walk you through setting up the Baseboard Management Controller (BMC) on your server.
 
-> Here is a video featuring the steps outlined below. Click the image to watch the video on YouTube:
+> Here is a reference video featuring the steps outlined below. Click the image to watch the video on YouTube:
 > <div align="left">
 >  <a href="https://youtu.be/o4y_G4bLZgs" target="_blank">
 >    <img src="https://img.youtube.com/vi/o4y_G4bLZgs/0.jpg" alt="Watch the video on YouTube">
@@ -72,5 +72,20 @@
 2. Access the BMC:
     - Ensure the management port is connected to your network via Ethernet
     - Open a web browser from a machine connected to the same network as the `Dedicated Management LAN Configuration IP` address you set in step [3.1](#3-configuring-bmc-network-settings)
-    - Navigate to the IP address you set during configuration  (Eg. `https://192.168.15.5` )
+    - Navigate to the IP address you set during configuration (Eg. `https://192.168.15.5` )
     - Enter the username and password you created to access the BMC and manage your system remotely
+
+## Sources
+- [BMC Instructions from Intel][BMC Instructions]
+- [What is HI BMC LAN][HI BMC LAN]
+
+[HI BMC LAN]: https://www.intel.com/content/www/us/en/support/articles/000059567/server-products/server-boards.html
+[BMC Instructions]: https://www.intel.com/content/www/us/en/support/articles/000007913/server-products.html
+
+
+
+## Revision History
+| Revision | Date       | Comments                                                                 | Author     |
+|----------|------------|--------------------------------------------------------------------------|------------|
+| 1.0      | 08/13/2024 | Initial release | Keegan Cox |
+| 1.1      | 08/14/2024 | Added media and validated process | Keegan Cox |

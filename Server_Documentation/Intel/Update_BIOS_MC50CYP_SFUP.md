@@ -142,7 +142,17 @@ To update the system software stack to the versions included in this update pack
 Do NOT interrupt or reboot or remove power from your system during the update process. Doing so may render your system inoperable.  
 Do NOT attempt to downgrade the system software once loaded onto the system. Doing so may render your system inoperable.
 
+
+## Sources
+- [Intel® Server BIOS Support Central][Intel® Server BIOS Support Central]
+- [Intel® Server Board M50CYP Intel® SFUP Download][Intel® Server Board M50CYP Intel® SFUP Download]
+- [Release Notes and Update Instructions][Release Notes and Update Instructions]
+
+[Intel® Server BIOS Support Central]: https://www.intel.com/content/www/us/en/support/articles/000088822/server-products.html
+[Intel® Server Board M50CYP Intel® SFUP Download]: https://www.intel.com/content/www/us/en/download/19813/intel-server-board-m50cyp-family-bios-and-firmware-update-package-sfup-for-windows-and-linux.htmlintel-server-board-s2600wf-family-bios-and-firmware-update-for-intel-one-boot-flash-update-intel-ofu-utility.html
+[Release Notes and Update Instructions]: https://downloadmirror.intel.com/794048/Readme%20and%20Update%20Instructions.txt
+
 ## Revision History
 | Revision | Date       | Comments                                                                 | Author     |
 |----------|------------|--------------------------------------------------------------------------|------------|
-| 1.0      | 08/13/2024 | Initial release of BIOS and Firmware Update Tutorial for Intel® Server Board M50CYP Family. | Keegan Cox |
+| 1.0      | 08/13/2024 | Initial release | Keegan Cox |

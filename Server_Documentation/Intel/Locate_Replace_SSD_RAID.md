@@ -2,7 +2,7 @@
 
 ## Prerequisites 
 - Ensure you have administrative access to the RAID Web Console 3. 
-    - Download Link: [RWC3 Download](https://webdrivers.blob.core.windows.net/drivers/server/Intel/RWC3_Win_v007.017.011.000.zip) 
+    - Download Link: [RWC3 Download][Download RWC3]
 - Backup all important data before proceeding. 
 - Have a compatible replacement SSD ready. 
     - Always ensure that the replacement SSD has the same or higher capacity as the one being replaced. 
@@ -132,3 +132,14 @@
 ![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/RAID_Alarm.png)
 
 ***
+
+## Sources
+- [Download RWC3][Download RWC3]
+
+[Download RWC3]: (https://webdrivers.blob.core.windows.net/drivers/server/Intel/RWC3_Win_v007.017.011.000.zip) 
+
+## Revision History
+| Revision | Date       | Comments                                                                 | Author     |
+|----------|------------|--------------------------------------------------------------------------|------------|
+| 1.0      | 08/09/2024 | Initial release | Keegan Cox |
+| 1.1      | 08/12/2024 | Added media and validated process | Keegan Cox |
