@@ -19,6 +19,10 @@
 
 - [Pulling Logs Using SEL Viewer Utility on Windows][selviewer_windows]
 
+
+### PSU
+- [Troubleshooting PSUs][PSU_Troubleshoot]
+
 ***
 
 </Details>
@@ -40,3 +44,5 @@ In development...
 [sysinfo_Windows]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Pulling-Server-Logs-on-Intel-Servers-Using-SysInfo-%E2%80%93-Windows-Environment
 [sysinfo_Linux]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Pulling-Server-Logs-on-Intel-Servers-Using-SysInfo-%E2%80%93-Linux-Environment
 [selviewer_windows]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Pulling-Logs-Using-SEL-Viewer-Utility-on-Windows
+
+[PSU_Troubleshoot]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Power-Supply-Unit-(PSU)-Troubleshooting-Guide

@@ -1,0 +1,30 @@
+Here is the troubleshooting information for the Power Supply Unit (PSU) based on the Intel® Server System M20NTP1UR Technical Product Specification document.
+
+3.3.2 Power Supply Status LED
+The PSU has a single bi-color LED that indicates its status. The LED can show the following states:
+
+Off: No source power to all power supplies.
+Solid Green: Output is on and OK.
+Blinking Green (1 Hz): Source AC power is present, only 12 VSB is on (power supply off), or the power supply is in a cold redundant state.
+Solid Amber: Source power cord unplugged or power lost, with a second power supply still providing AC input power; or a critical event causing a shutdown, such as failure, overcurrent protection, overvoltage protection, or fan failure.
+Blinking Amber (1 Hz): Power supply warning events where the PSU continues to operate, such as high temperature, high power, high current, or slow fan​(m20ntp1ur-1u-tps).
+3.3.4 Protection Circuits
+The power supply includes several protection circuits that will cause the main outputs to shut down (latch off) in case of certain conditions. If the PSU latches off due to a protection circuit activation, it requires an AC power cycle off for 15 seconds to reset. The auxiliary output is not affected unless it itself is impacted.
+
+3.3.4.1 Overcurrent Protection (OCP)
+Each power supply is equipped with overcurrent protection to prevent the main and auxiliary outputs from exceeding specified limits. If these limits are exceeded, the power supply shuts down and latches off. The specific overcurrent limits are:
+
++12 V: 74 A maximum (with a delay of 10 milliseconds)
++5 VSB (auxiliary): 6 A maximum​(m20ntp1ur-1u-tps).
+3.3.4.2 Over-Voltage Protection (OVP)
+Over-voltage protection shuts down and latches off the PSU when an over-voltage condition is detected on the main outputs. This shutdown does not affect the other (redundant) power supply. To reset the latch, an AC power cycle off for at least 3 seconds is required. The over-voltage thresholds are:
+
++12 V: 13.8 to 14.5 V
++5 VSB (auxiliary): 5.75 to 6 V​(m20ntp1ur-1u-tps).
+3.3.4.3 Over-Temperature Protection (OTP)
+The power supply is protected against over-temperature conditions, which could occur due to a loss of fan cooling or excessive ambient temperature. If an over-temperature condition occurs, the power supply shuts down. The PSU will recover once the temperature falls back within normal operating limits. The +5 VSB does not shut down during an OTP event on the main outputs. The warning and critical temperature settings are:
+
+Warning: 55°C
+Critical: 65°C
+Timing for SMBAlert#: 1 second​(m20ntp1ur-1u-tps).
+This information can be included in the troubleshooting document to help the server support team quickly identify and resolve PSU-related issues based on LED indicators and protection circuit responses.

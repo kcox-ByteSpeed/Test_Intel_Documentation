@@ -15,44 +15,56 @@
 
 - **Physical Access to the Server:** You will need to connect peripherals (mouse, keyboard, monitor) to the server and access the physical ports.
 - **Network Information:** Have the **IP address**, **subnet mask**, and **gateway** information ready if you plan to use static IP configuration.
+- **User Information** Have a **username** and a **password** ready for accessing the BMC. 
 - **Admin Privileges:** You should have administrative privileges to make changes to the server’s UEFI settings.
 - **Ethernet Cable:** Ensure you have an Ethernet cable to connect the server to your network via the management port.
 - **Web Browser:** Access to a web browser on a device connected to the **same network as the server** for final BMC access.
 
-## 1. Initial Setup
+## 1. Entering Setup and Navigating the BIOS
 1. Connect Hardware:
     - Plug in a mouse, keyboard, and monitor to your server.
+
 2. Restart the Server:
-    - Power on or restart the server.
+    > Migrate VMs and put the server in maintenance mode if necessary
+    - Power on or restart the server
+
+3. Access BIOS
     - During boot, rapidly press <KBD>F2</KBD> to enter the System Setup.
-
-## 2. Entering UEFI and Navigating
-1. Access UEFI:
     - Once in UEFI, use the arrow keys to navigate
-2. Navigate to Server Management and press <KBD>Enter</KBD>
 
-3. Configure BMC LAN:
+4. Navigate to `Server Management` and press <KBD>Enter</KBD>
+
+5. Configure BMC LAN:
     - Navigate to the bottom of the page to `BMC LAN Configuration` and press <KBD>Enter</KBD>
 
 
-## 3. Configuring BMC Network Settings
+## 2. Configuring BMC Network Settings
 1. Dedicated Management LAN Configuration:
+    > Enables `remote management` over the dedicated management port. 
+    > This offers availability to the remote management console but does not include a redundant failover path.
+
     - Enter your network information under `Dedicated Management LAN Configuration`:
         - Set a static or dynamic IPv4 address (Static is recommended for most applications)
         - Enter the subnet mask
         - Enter the gateway
-        > Record network information for later use
-    - Plug an Ethernet cable into the management port of the server
+    - Plug an Ethernet cable into the [management port of the server](#m50cyp)
         - There is a mgmt label next to the port
 
-![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/BMC_Management_Port.png)
-
 2. (Optional) Baseboard LAN Configuration:
+    > Enables `remote management` over the onboard ethernet NICs that share the port with other host traffic.
+    > This offers greater redundancy because the host can fail over between the two onboard ethernet NICs; however,
+    > host traffic can bottleneck remote management traffic, causing a denial of service to the remote management console.
+
     - If desired, navigate to Baseboard LAN Configuration to set up another network address
     - This will enable remote management over the onboard Ethernet NIC
 
+## M50CYP
+![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/BMC_Management_Port.png)
 
-## 4. User Configuration
+## S2600WF
+![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/S2600WF_Management_Port.png)
+
+## 3. User Configuration
 1. At the top of the page, navigate to User Configuration and press <KBD>Enter</KBD>:
 
 2. Set Privileges for User2:
@@ -71,21 +83,13 @@
 
 2. Access the BMC:
     - Ensure the management port is connected to your network via Ethernet
-    - Open a web browser from a machine connected to the same network as the `Dedicated Management LAN Configuration IP` address you set in step [3.1](#3-configuring-bmc-network-settings)
+    - Open a web browser from a machine connected to the same network as the `Dedicated Management LAN Configuration IP` address you set in step [2.1](#2-configuring-bmc-network-settings)
     - Navigate to the IP address you set during configuration (Eg. `https://192.168.15.5` )
     - Enter the username and password you created to access the BMC and manage your system remotely
-
-## Sources
-- [BMC Instructions from Intel][BMC Instructions]
-- [What is HI BMC LAN][HI BMC LAN]
-
-[HI BMC LAN]: https://www.intel.com/content/www/us/en/support/articles/000059567/server-products/server-boards.html
-[BMC Instructions]: https://www.intel.com/content/www/us/en/support/articles/000007913/server-products.html
-
 
 
 ## Revision History
 | Revision | Date       | Comments                                                                 | Author     |
 |----------|------------|--------------------------------------------------------------------------|------------|
-| 1.0      | 08/13/2024 | Initial release | Keegan Cox |
-| 1.1      | 08/14/2024 | Added media and validated process | Keegan Cox |
+| 1.0      | 08/19/2024 | Initial release | Keegan Cox |
+| 1.1      | 08/26/2024 | Revisions | Keegan Cox |
