@@ -22,7 +22,7 @@
 
 ### PSU
 - [Troubleshooting PSUs][PSU_Troubleshoot]
-
+- [Understanding UPS Types and Their Impact on High Performance PSUs][UPS_Recommendation]
 ***
 
 </Details>
@@ -46,3 +46,4 @@ In development...
 [selviewer_windows]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Pulling-Logs-Using-SEL-Viewer-Utility-on-Windows
 
 [PSU_Troubleshoot]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Power-Supply-Unit-(PSU)-Troubleshooting-Guide
+[UPS_Recommendation]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Understanding-UPS-Types-and-Their-Impact-on-High%E2%80%90Performance-PSUs

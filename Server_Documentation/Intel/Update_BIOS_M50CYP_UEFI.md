@@ -30,7 +30,7 @@
 
 3. Software Downloads:
     - Download the BIOS and Firmware Update Package: [M50CYP_EFI_BIOSR01.01.0009_X.zip][intel] from the Intel website
-> Verify the integrity of the downloaded file using the SHA256 checksum on the site
+> [Verify the integrity][hash] of the downloaded file using the SHA256 checksum on the site
 
 ## Important Notes
 - **Update Order:** It is recommended to first update to firmware version `R01.01.0008` before proceeding to `R01.01.0009`
@@ -102,10 +102,12 @@
 - [Intel Download Center][intel]
 - [BIOS and Firmware Update Instructions][intel-instructions]
 - [EFI Shell USB Boot Guide][efi-shell]
+- [Checking a File's Hash][hash]
 
 [intel]: https://www.intel.com/content/www/us/en/download/19810/intel-server-board-m50cyp-family-bios-and-firmware-update-package-for-uefi.html
 [intel-instructions]: https://downloadmirror.intel.com/793666/Readme%20and%20Update%20Instructions.txt
 [efi-shell]: https://thetechylife.com/how-do-i-boot-from-usb-with-efi-shell/
+[hash]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Checking-a-File's-SHA256-Hash-in-PowerShell
 
 
 ## Revision History

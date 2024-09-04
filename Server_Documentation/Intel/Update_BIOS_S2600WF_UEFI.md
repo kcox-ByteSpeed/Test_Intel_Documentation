@@ -29,7 +29,7 @@
 3. Software Downloads:
     - Download the BIOS and Firmware Update Package: [S2600WF_EFI_BIOSR02.01.0017.zip][Intel® Server Board S2600WF Intel® Download] from the Intel website.
 
-> Verify the integrity of the downloaded file using the SHA256 checksum provided on the site.
+> [Verify the integrity][hash] of the downloaded file using the SHA256 checksum provided on the site.
 
 
 ## Important Notes:
@@ -101,10 +101,12 @@
 - [Intel® Server BIOS Support Central][Intel® Server BIOS Support Central]
 - [Intel® Server Board S2600WF Intel® Download][Intel® Server Board S2600WF Intel® Download]
 - [Release Notes and Update Instructions][Release Notes and Update Instructions]
+- [Checking a File's Hash][hash]
 
 [Intel® Server BIOS Support Central]: https://www.intel.com/content/www/us/en/support/articles/000088822/server-products.html
 [Intel® Server Board S2600WF Intel® Download]: https://www.intel.com/content/www/us/en/download/18911/intel-server-board-s2600wf-family-bios-and-firmware-update-package-for-uefi.htmlhtmlhtmlintel-server-board-s2600wf-family-bios-and-firmware-update-for-intel-one-boot-flash-update-intel-ofu-utility.html
 [Release Notes and Update Instructions]: https://downloadmirror.intel.com/812650/Readme%20and%20Update%20Instructions.txt
+[hash]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Checking-a-File's-SHA256-Hash-in-PowerShell
 
 ## Revision History
 | Revision | Date       | Comments                                                                 | Author     |
