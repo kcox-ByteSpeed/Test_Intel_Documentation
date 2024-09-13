@@ -21,20 +21,42 @@
 
 ![](image of back of 1U and 2U ASUS servers)
 
-### Step 2: Configure BIOS Settings
-1. Enter BIOS Setup:
-    - Restart the server and press <Del> during POST to enter the BIOS setup.
-2. Access the BMC Network Configuration:
-    - Navigate to Server Mgmt > BMC network configuration.
-3. Set IP Configuration:
-    - Choose IPv4 or IPv6 based on your network:
-        - For IPv4:
-            - Set Configuration Address source to [Static].
-            - Enter the Station IP Address and Subnet Mask.
-        - For IPv6:
-            - Enable IPv6 Support, then configure the Station IP Address and Prefix Length.
-4. Save and Exit:
-    - Press <KBD>F10</KBD> to save changes and exit the BIOS.
+### Step 2: Configure BMC Network Settings in the BIOS
+1. (Option 1) Dedicated Management LAN Configuration (DM_LAN):
+    > This configuration enables remote management over the `dedicated management port (DM_LAN)`.
+    > It provides dedicated lights out management but does not offer a redundant failover path.
+
+    Steps:
+    - Set `Configuratoin Address Source` to `Static` 
+    - Enter your network information under `DM_LAN` configuration:
+        - Set a static or dynamic IPv4 address (Static is recommended for most applications).
+        - Enter the subnet mask.
+        - Enter the gateway.
+    - If not already done, plug an Ethernet cable into the `DM_LAN (Direct Management) port` of the server (see image above).
+        - The management port is labeled "MGMT" or DM_LAN next to the port.
+
+2. (Option 2) Shared LAN Configuration:
+    > Enables remote management over the onboard Ethernet NICs that shares the port with other host traffic.
+    > This configuration offers greater redundancy because the host can fail over between the onboard Ethernet NICs; however, host traffic can bottleneck remote management traffic, potentially causing a denial of service to the remote management console.
+
+    Steps:
+    - Set `Configuratoin Address Source` to `Static` 
+    - Enter your network information under `Shared LAN` configuration:
+        - Set a static or dynamic IPv4 address (Static is recommended for most applications).
+        - Enter the subnet mask.
+        - Enter the gateway.
+        - This will enable remote management over the Shared LAN Ethernet NICs, which handle both host and management traffic.
+    - If not already done, plug an Ethernet cable into the `Shared LAN port` of the server (see image above).
+        - The management port is labeled "MGMT" or DM_LAN next to the port.
+
+3. (Option 3) Shared LAN or DM_LAN over IPv6
+    > Disable IPv6 if it is not needed
+    
+    Steps:
+    - Below the IPv4 settings, navigate to the respective port (DM_LAN or Shared LAN) and `enable IPv6 support`
+    - Set `Configuratoin Address Source` to `Static` 
+    - Enter your network information for the respective interface
+
 
 ### Step 3: Access ASMB11-iKVM via Web Browser
 1. Open the Web Browser:
@@ -68,6 +90,15 @@
     - Port 443 (HTTPS)
     - Port 161 (SNMP) (Optional)
 
+## More Information
+- [ASMB11-iKVM Server Management Board User Guide][ASMB-iKVM_reference]
+
+[ASMB-iKVM_reference]: https://dlcdnets.asus.com/pub/ASUS/server/accessory/ASMB11/Manual/E20952_ASMB11-iKVM_UM_WEB.pdf?model=ASMB11-iKVM
+
+## Revision History
+| Revision | Date       | Comments                                                                 | Author     |
+|----------|------------|--------------------------------------------------------------------------|------------|
+| 1.0      | 09/13/2024 | Initial release | Keegan Cox |
 
 
 

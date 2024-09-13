@@ -54,8 +54,7 @@
 ## More Information
 - [ASMB11-iKVM Server Management Board User Guide][ASMB-iKVM_reference]
 
-
-[ASMB-iKVM_reference]:https://dlcdnets.asus.com/pub/ASUS/server/accessory/ASMB11/Manual/E20952_ASMB11-iKVM_UM_WEB.pdf?model=ASMB11-iKVM
+[ASMB-iKVM_reference]: https://dlcdnets.asus.com/pub/ASUS/server/accessory/ASMB11/Manual/E20952_ASMB11-iKVM_UM_WEB.pdf?model=ASMB11-iKVM
 
 
 ## Revision History
