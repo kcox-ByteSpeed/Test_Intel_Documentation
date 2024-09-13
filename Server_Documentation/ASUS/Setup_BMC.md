@@ -30,8 +30,11 @@
 1. Attach the Network Cable
     - Connect the network cable to the Dedicated Management Port or the Shared Ethernet Port on the server.
     - Ensure the other end of the cable is connected to your network, either directly or through a network switch/router.
+    
 
-![](image of back of 1U and 2U ASUS servers)
+    *ASUS 2U Server:*
+
+    ![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/ASUS/Setup_BMC/2U_Ports.png)
 
 ### Step 2: Configure BMC Network Settings in the BIOS
 1. Enter the BIOS
@@ -56,7 +59,7 @@
         - Enter the subnet mask.
         - Enter the gateway.
     - If not already done, plug an Ethernet cable into the `DM_LAN (Direct Management) port` of the server (see image above).
-        - The management port is labeled "MGMT" or DM_LAN next to the port.
+        - The management port is labeled "MGMT" next to the port.
 
     ![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/ASUS/Setup_BMC/2-1-DM_LAN.png)
 
@@ -72,7 +75,7 @@
         - Enter the gateway.
         - This will enable remote management over the Shared LAN Ethernet NICs, which handle both host and management traffic.
     - If not already done, plug an Ethernet cable into the `Shared LAN port` of the server (see image above).
-        - The management port is labeled "MGMT" or DM_LAN next to the port.
+        - The Shared LAN is one of the onboard Ethernet NICs that are not labled MGMT or Console
 
     ![](https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/blob/main/Images/ASUS/Setup_BMC/2-2-Shared_LAN.png)
 
@@ -90,7 +93,7 @@
     - Press <KBD>f10</KBD> to save changes and exit. 
     - Confirm if necessary
 
-### Step 3: Access ASMB11-iKVM via a Web Browser
+### Step 3: Access ASMB11-iKVM via Web Browser
 1. Open the Web Browser:
     - On a device connected to the same network, open a web browser and enter the IP address you configured in the BIOS settings.
 

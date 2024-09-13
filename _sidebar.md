@@ -30,6 +30,7 @@
     <summary> <h2>AMD</h2> </summary>
 
 - [Creating a Custom Fan Profile for ASUS Server Chassis via ASMB11‐iKVM][Fan_Profile]
+- [Setting Up the Baseboard Management Controller (BMC) on ASUS 1U and 2U servers][setup_BMC]
 
 ***
 
@@ -59,3 +60,4 @@
 
 [//]: <> (ASUS)
 [Fan_Profile]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Creating-a-Custom-Fan-Profile-for-ASUS-Server-Chassis-via-ASMB11%E2%80%90iKVM
+[Setup_BMC]: https://github.com/kcox-ByteSpeed/Test_Intel_Documentation/wiki/Setting-Up-the-Baseboard-Management-Controller-(BMC)-on-ASUS-1U-and-2U-servers
